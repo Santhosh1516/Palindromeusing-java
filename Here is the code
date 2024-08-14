@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Palindrome {
+	public static void palin(String pop) {
+		String first_half="";
+		String second_half="";
+		for(int i=0;i<=pop.length()/2;i++) {
+			first_half=first_half+pop.charAt(i);
+			second_half=second_half+pop.charAt((pop.length()-1)-i);
+		}
+		System.out.println(first_half);
+		System.out.println(second_half);
+		if(first_half.equals(second_half)) {
+			System.out.println("It is palindrome");
+		}
+		else {
+			System.out.println("It is not a palindrome");
+		}
+	}
+	public static void main(String[] args) {
+		Scanner rs=new Scanner(System.in);
+		System.out.println("Enter the String");
+		String r=rs.nextLine();
+		palin(r);
+	}
+}
